@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+.venv/
+
+# Output files
+output/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config files with potential secrets
+*.json
+!package.json

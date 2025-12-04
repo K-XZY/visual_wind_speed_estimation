@@ -1,0 +1,29 @@
+# Serial Device Configuration
+# Shared between wind_speed_estimator.py and GUI
+
+devices:
+  # First device = ground truth sensor (for tuning on Pi)
+  # Connect GT sensor via USB to Pi during tuning phase
+  - name: "Ground Truth"
+    port: "/dev/ttyACM0"
+    baud: 115200
+
+  # Second device = output via Pi's hardware UART (GPIO14 TX)
+  # Pi TX → STM32 RX (PA10/D2) → STM32 USB → Laptop
+  - name: "Student"
+    port: "/dev/ttyAMA0"
+    baud: 115200
+
+# GUI display settings
+ui:
+  max_points: 3000
+  refresh_ms: 30
+  window_seconds: 15
+  max_speed: 10
+  min_speed: 0
+  log_rate_hz: 20
+  align_tolerance_ms: 40
+  y_log: false
+  air_density: 1.204
+  dp_error_pa: 0.62
+  error_speed_floor: 0.2

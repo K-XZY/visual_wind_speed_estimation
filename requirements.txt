@@ -1,0 +1,17 @@
+# Virtual environment created with --system-site-packages
+# to access system-level libcamera and picamera2
+#
+# Setup instructions:
+# 1. python3 -m venv --system-site-packages venv
+# 2. source venv/bin/activate
+# 3. pip install -r requirements.txt
+
+jupyter
+ipykernel
+matplotlib
+
+# These are available via system packages:
+# - picamera2 (requires system libcamera)
+# - numpy
+# - opencv-python (cv2)
+# - pillow
